@@ -24,7 +24,7 @@ var NameList = React.createClass({
       <div className={this.state.important ? "important" : ''} >
         <ol>
           {this.props.names.map(function(name) {
-            return <li>{name}</li>;
+            return <li key={name}>{name}</li>;
           })}
         </ol>
         <button onClick={this.onMarkImportant}>Important</button>
